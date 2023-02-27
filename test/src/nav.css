@@ -2,13 +2,25 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: 'Games';
+    src: url(Games.woff);
+    font-weight: bold;
+    font-style: italic;
+}
+
 body {
+    background-image: url("image1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
     margin: 0;
 }
 
 .container {
     margin: 1rem;
     text-align: center;
+    font-size: x-large;
+    
 }
 
 .nav {
@@ -22,17 +34,19 @@ body {
 }
 
 .site-title {
-    font-size: 2rem;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 3rem;
+    font-family: 'Games';
 }
 
 .nav ul {
     padding: 0;
     margin: 0;
+    height: 100%;
     list-style: none;
     display: flex;
     gap: 1rem;
-    font-family:'Courier New', Courier, monospace
+    font-family:'Games';
+    font-size: 2rem;
 }
 
 .nav a {
@@ -50,5 +64,5 @@ body {
 
 .nav li:hover {
     background-color: #777;
-}
 
+}
