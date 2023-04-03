@@ -2,17 +2,10 @@
     box-sizing: border-box;
 }
 
-@font-face {
-    font-family: 'Games';
-    src: url(Games.woff);
-    font-weight: bold;
-    font-style: italic;
-}
-
 body {
-    background-image: url("image1.jpg");
+    background-image: url('image1.jpg');
+    background-size:cover;
     background-repeat: no-repeat;
-    background-size: cover;
     margin: 0;
 }
 
@@ -20,7 +13,6 @@ body {
     margin: 1rem;
     text-align: center;
     font-size: x-large;
-    
 }
 
 .nav {
@@ -36,16 +28,26 @@ body {
 .site-title {
     font-size: 3rem;
     font-family: 'Games';
+    margin: 10px;
+    transition:ease-in-out 0.4s;
+    border-radius: 10px;
+}
+
+.site-title:hover {
+    background-color: #777;
+    border-radius: 10px;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
 }
 
 .nav ul {
     padding: 0;
-    margin: 0;
+    margin: 10px;
     height: 100%;
     list-style: none;
     display: flex;
     gap: 1rem;
-    font-family:'Games';
+    font-family:'Cocogoose';
     font-size: 2rem;
 }
 
@@ -58,11 +60,26 @@ body {
     padding: 0.25rem;
 }
 
+.nav li {
+    border-radius: 10px;
+    transition:ease-in-out 0.4s;
+}
+
 .nav li.active {
     background-color: #555;
+    border-radius: 10px;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    color: white;
 }
 
 .nav li:hover {
     background-color: #777;
+    border-radius: 10px;
+    padding-left: 0.125rem;
+    padding-right: 0.125rem;
+}
 
+.nav ul li:nth-child(4) {
+    background-color: royalblue;
 }

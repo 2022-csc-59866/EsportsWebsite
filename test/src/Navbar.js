@@ -8,11 +8,15 @@ export default function Navbar() {
                 <CustomLink to="/about">About</CustomLink>
             </li>
             <li>
+                <CustomLink to="/lol">League of Legends</CustomLink>
+            </li>
+            <li>
                 <CustomLink to="/contact">Contact Us</CustomLink>
             </li>
             <li>
-                <CustomLink to="/lol">League of Legends</CustomLink>
+                <CustomLink to="/login">Sign In</CustomLink>
             </li>
+            
         </ul>
     </nav>
 }
