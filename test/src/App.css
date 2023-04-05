@@ -8,14 +8,21 @@
 
 @font-face {
   font-family: 'Games';
-  src: url(Games.woff);
+  src: url(Fonts/Games.woff);
   font-weight: bold;
   font-style: italic;
 }
 
 @font-face {
   font-family: 'Cocogoose';
-  src: url(Cocogoose.woff);
+  src: url(Fonts/Cocogoose.woff);
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'CapsuleX';
+  src: url(Fonts/CapsuleX.otf);
   font-weight: bold;
   font-style: italic;
 }
@@ -53,12 +60,20 @@ input {
 button {
   border: none;
   background-color: blue;
-  padding: 20px 77px;
-  border-radius: 10px;
+  padding: 5px 25px;
+  border-radius: 20px;
   cursor: pointer;
   color: white;
   font-family: 'Cocogoose';
-  font-size: large;
+  font-size: xx-large;
+  transition:ease-in-out 0.4s;
+}
+
+button:hover {
+  background-color: #777;
+  border-radius: 30px;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .link-btn {
@@ -77,9 +92,20 @@ body {
   color: greenyellow;
 }
 
-h1, p {
+h1 {
   font-family: 'Cocogoose', sans-serif;
   text-shadow: 3px 3px 3px blue;
+}
+
+p {
+  font-family: 'CapsuleX', sans-serif;
+  text-shadow: 3px 3px 3px blue;
+}
+
+.profile {
+  font-family: "Cocogoose";
+  text-shadow: none;
+  margin: 0px;
 }
 
 /* Image 1 Contanier */

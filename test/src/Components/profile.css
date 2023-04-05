@@ -1,0 +1,26 @@
+.profile-items {
+    display:flex;
+    list-style: none;
+    text-align: center;
+    width: 10rem;
+    justify-content: flex-start;
+    position:fixed;
+    flex-direction: column;
+}
+
+.profile-items li {
+    background: rgb(0, 212, 212);
+    cursor: pointer;
+    height: 3rem;
+    width: 8rem;
+    border-radius: 10px;
+    margin:0px;
+    font-size: x-large;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.profile-items.clicked {
+    transition: ease-in-out 0.4s;
+    display: none;
+}

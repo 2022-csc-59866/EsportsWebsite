@@ -1,6 +1,12 @@
+import React, { useState } from "react";
 import {Link, useMatch, useResolvedPath} from "react-router-dom";
+import { Login } from './Login';
+import { Logout } from './Logout';
+import { Profile } from './Profile';
+import { profileDropdown } from "./ProfileDropdown";
 
 export default function Navbar() {
+    const [open, setOpen] = useState(false);
     return <nav className="nav">
         <Link to="/" className="site-title">Esports Frenzy</Link>
         <ul>
@@ -14,7 +20,15 @@ export default function Navbar() {
                 <CustomLink to="/contact">Contact Us</CustomLink>
             </li>
             <li>
-                <CustomLink to="/login">Sign In</CustomLink>
+                <>
+                    <Login/>
+                    <Logout/>
+                </>
+            </li>
+            <li>
+                <Profile onClick={() => {setOpen(!open)}}/>
+
+                
             </li>
             
         </ul>

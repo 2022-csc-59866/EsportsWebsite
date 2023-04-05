@@ -3,7 +3,7 @@
 }
 
 body {
-    background-image: url('image1.jpg');
+    background-image: url('Images/image1.jpg');
     background-size:cover;
     background-repeat: no-repeat;
     margin: 0;
@@ -30,7 +30,7 @@ body {
     font-family: 'Games';
     margin: 10px;
     transition:ease-in-out 0.4s;
-    border-radius: 10px;
+    border-radius: 20px;
 }
 
 .site-title:hover {
@@ -38,6 +38,7 @@ body {
     border-radius: 10px;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
+    border-radius: 20px;
 }
 
 .nav ul {
@@ -61,13 +62,13 @@ body {
 }
 
 .nav li {
-    border-radius: 10px;
+    border-radius: 20px;
     transition:ease-in-out 0.4s;
 }
 
 .nav li.active {
     background-color: #555;
-    border-radius: 10px;
+    border-radius: 20px;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
     color: white;
@@ -75,7 +76,7 @@ body {
 
 .nav li:hover {
     background-color: #777;
-    border-radius: 10px;
+    border-radius: 30px;
     padding-left: 0.125rem;
     padding-right: 0.125rem;
 }
