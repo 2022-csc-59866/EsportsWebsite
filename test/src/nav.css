@@ -1,0 +1,86 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('Images/image1.jpg');
+    background-size:cover;
+    background-repeat: no-repeat;
+    margin: 0;
+}
+
+.container {
+    margin: 1rem;
+    text-align: center;
+    font-size: x-large;
+}
+
+.nav {
+    background-color: darkblue;
+    color: greenyellow;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 2rem;
+    padding: 0 1rem;
+}
+
+.site-title {
+    font-size: 3rem;
+    font-family: 'Games';
+    margin: 10px;
+    transition:ease-in-out 0.4s;
+    border-radius: 20px;
+}
+
+.site-title:hover {
+    background-color: #777;
+    border-radius: 10px;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    border-radius: 20px;
+}
+
+.nav ul {
+    padding: 0;
+    margin: 10px;
+    height: 100%;
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    font-family:'Cocogoose';
+    font-size: 2rem;
+}
+
+.nav a {
+    color: inherit;
+    text-decoration: none;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0.25rem;
+}
+
+.nav li {
+    border-radius: 20px;
+    transition:ease-in-out 0.4s;
+}
+
+.nav li.active {
+    background-color: #555;
+    border-radius: 20px;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    color: white;
+}
+
+.nav li:hover {
+    background-color: #777;
+    border-radius: 30px;
+    padding-left: 0.125rem;
+    padding-right: 0.125rem;
+}
+
+.nav ul li:nth-child(4) {
+    background-color: royalblue;
+}
