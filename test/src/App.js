@@ -5,8 +5,9 @@ import './nav.css';
 import Navbar from './Components/Navbar';
 import Home from "./Components/Home";
 import About from "./Components/About";
-import ContactUs from "./Components/ContactUs";
 import League from './Components/League';
+import Careers from './Components/Careers';
+import ContactUs from "./Components/ContactUs";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/" element={<Home/>}/>
           <Route path="/about" element={<About/>}/>
           <Route path="/lol" element={<League/>}/>
+          <Route path="/careers" element={<Careers/>}/>
           <Route path="/contact" element={<ContactUs/>}/>
         </Routes>
       </div>
