@@ -80,7 +80,3 @@ body {
     padding-left: 0.125rem;
     padding-right: 0.125rem;
 }
-
-.nav ul li:nth-child(4) {
-    background-color: royalblue;
-}

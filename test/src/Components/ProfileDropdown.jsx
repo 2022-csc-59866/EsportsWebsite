@@ -13,7 +13,7 @@ export const profileDropdown = [
     },
     {
         id: 3,
-        title: "Logout",
+        title: "Sign Out",
         path: "./logout",
         cName: "submenu-item"
     }

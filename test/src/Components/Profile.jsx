@@ -5,7 +5,7 @@ import { profileDropdown } from "./ProfileDropdown";
 import './profile.css';
 
 export const Profile = () => {
-  const { user, isAuthenticated, isLoading } = useAuth0();
+  const { user, isAuthenticated, isLoading, logout } = useAuth0();
   const [open, setOpen] = useState(false);
 
   if (isLoading) {
@@ -19,13 +19,24 @@ export const Profile = () => {
 
           <ul className={open ? "profile-items clicked" : "profile-items"} onClick={() => {setOpen(!open)}}>
                 {profileDropdown.map(item => {
-                return (
+                  if (item.title === "Sign Out") {
+                    return (
                     <li key={item.id}>
-                    <Link to={item.path} className={item.cName} onClick={() => {setOpen(false)}}>
-                        {item.title}
-                    </Link>
-                    </li>
-                )
+                      <Link to={item.path} className={item.cName} onClick={() => logout()}>
+                          {item.title}
+                      </Link>
+                      </li>
+                    )
+                  }
+                  else {
+                    return (
+                      <li key={item.id}>
+                      <Link to={item.path} className={item.cName} onClick={() => {setOpen(false)}}>
+                          {item.title}
+                      </Link>
+                      </li>
+                    )
+                  }
                 })}
             </ul>
         </div>

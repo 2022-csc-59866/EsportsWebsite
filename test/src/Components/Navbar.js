@@ -17,18 +17,16 @@ export default function Navbar() {
                 <CustomLink to="/lol">League of Legends</CustomLink>
             </li>
             <li>
+                <CustomLink to="/careers">Careers</CustomLink>
+            </li>
+            <li>
                 <CustomLink to="/contact">Contact Us</CustomLink>
             </li>
             <li>
-                <>
-                    <Login/>
-                    <Logout/>
-                </>
+                <Login/>
             </li>
             <li>
                 <Profile onClick={() => {setOpen(!open)}}/>
-
-                
             </li>
             
         </ul>
