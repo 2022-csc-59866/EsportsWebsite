@@ -1,30 +1,34 @@
 .App {
   text-align: center;
   display: flex;
+  flex-direction: column;
   min-height: 100vh;
-  align-items: center;
-  justify-content: center;
+  overflow: auto;
 }
 
 @font-face {
   font-family: 'Games';
   src: url(Fonts/Games.woff);
-  font-weight: bold;
-  font-style: italic;
 }
 
 @font-face {
   font-family: 'Cocogoose';
   src: url(Fonts/Cocogoose.woff);
-  font-weight: bold;
-  font-style: italic;
 }
 
 @font-face {
   font-family: 'CapsuleX';
   src: url(Fonts/CapsuleX.otf);
-  font-weight: bold;
-  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Manrope';
+  src: url(Fonts/Manrope.ttf);
+}
+
+@font-face {
+  font-family: 'Quicksand';
+  src: url(Fonts/Quicksand.ttf);
 }
 
 .auth-form-container, .login-form, .register-form {
@@ -92,13 +96,14 @@ body {
   color: greenyellow;
 }
 
-h1 {
-  font-family: 'Cocogoose', sans-serif;
+h1, h2, h3 {
+  font-family: 'Cocogoose';
   text-shadow: 3px 3px 3px blue;
+  margin:5px;
 }
 
 p {
-  font-family: 'CapsuleX', sans-serif;
+  font-family: 'CapsuleX';
   text-shadow: 3px 3px 3px blue;
 }
 
@@ -138,6 +143,58 @@ p {
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 2em;
+}
+
+.league-bg {
+  background-image: url("Images/league.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 91vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
+  object-fit: contain;
+}
+
+.league-search {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5px;
+}
+
+.league-info {
+  font-family: 'Manrope';
+  font-size:x-large;
+  color: white;
+  text-shadow: none;
+  margin:5px;
+}
+
+.league-pfp {
+  width: 150px;
+  height: 150px;
+  border-radius: 30px;
+  border: 5px solid #777;
+  box-shadow: 0px 10px 0.6em black;
+}
+
+.league-table {
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 30px;
+  margin: 20px;
+  padding: 10px;
+  text-align: left;
+}
+
+.circle-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 5px solid #777;
 }
 
 @media screen {

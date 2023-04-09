@@ -1,9 +1,7 @@
 import React, { useState } from "react";
-import {Link, useMatch, useResolvedPath} from "react-router-dom";
+import { Link, useMatch, useResolvedPath } from "react-router-dom";
 import { Login } from './Login';
-import { Logout } from './Logout';
-import { Profile } from './Profile';
-import { profileDropdown } from "./ProfileDropdown";
+import { User } from './User';
 
 export default function Navbar() {
     const [open, setOpen] = useState(false);
@@ -26,7 +24,7 @@ export default function Navbar() {
                 <Login/>
             </li>
             <li>
-                <Profile onClick={() => {setOpen(!open)}}/>
+                <User onClick={() => {setOpen(!open)}}/>
             </li>
             
         </ul>

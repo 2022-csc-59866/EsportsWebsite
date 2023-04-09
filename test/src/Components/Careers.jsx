@@ -5,4 +5,4 @@ export default function Careers() {
         <p>Git gud</p>
       </div>
     );
-    }
+}

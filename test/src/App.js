@@ -8,10 +8,12 @@ import About from "./Components/About";
 import League from './Components/League';
 import Careers from './Components/Careers';
 import ContactUs from "./Components/ContactUs";
+import Profile from './Components/Profile';
+import Footer from './Components/Footer';
 
 function App() {
   return (
-    <>
+    <div className='App'>
       <Navbar/>
       <div className='container'>
         <Routes>
@@ -20,9 +22,11 @@ function App() {
           <Route path="/lol" element={<League/>}/>
           <Route path="/careers" element={<Careers/>}/>
           <Route path="/contact" element={<ContactUs/>}/>
+          <Route path="/profile" element={<Profile/>}/>
         </Routes>
+        <Footer/>
       </div>
-    </>
+    </div>
   )
 }
 

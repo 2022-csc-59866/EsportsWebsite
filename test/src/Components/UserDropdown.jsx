@@ -1,4 +1,4 @@
-export const profileDropdown = [
+export const userDropdown = [
     {
         id: 1,
         title: "Profile",
