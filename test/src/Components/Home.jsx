@@ -47,9 +47,11 @@ export default function Home() {
           <a href="https://esportsinsider.com/events/esi-singapore-2023" className="btn btn-primary">Click Here</a>
         </div>
       </div>
-
       </div>
 
+      <footer style={{ backgroundColor: '#333', color: '#fff', textAlign: 'center', padding: '20px' }}>
+      <p>This is the footer content</p>
+      </footer>
       </div>
   );
 }
