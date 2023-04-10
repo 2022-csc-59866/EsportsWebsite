@@ -298,7 +298,15 @@ export default function League() {
                   </div>
                   <p className='league-info' style={{marginLeft:'10px'}}>{(champData[Object.keys(champData)[0]]["spells"]["0"]["name"])} </p>
                 </div>
-                {showSkill1 && <p className='league-info'>{(champData[Object.keys(champData)[0]]["spells"]["0"]["description"])}</p>}
+                {showSkill1 ?
+                <>
+                  {<p className={`slide-in-out-fade-in-out show`}>{(champData[Object.keys(champData)[0]]["spells"]["0"]["description"])}</p>}
+                </>
+                :
+                <>
+                  {<p className={`slide-in-out-fade-in-out hide`}>{(champData[Object.keys(champData)[0]]["spells"]["0"]["description"])}</p>}
+                </>}
+                
 
 
                 <div className="skills">
@@ -308,7 +316,14 @@ export default function League() {
                   </div>
                   <p className='league-info' style={{marginLeft:'10px'}}>{(champData[Object.keys(champData)[0]]["spells"]["1"]["name"])} </p>
                 </div>
-                {showSkill2 && <p className='league-info' >{(champData[Object.keys(champData)[0]]["spells"]["1"]["description"])}</p>}
+                {showSkill2 ?
+                <>
+                  {<p className={`slide-in-out-fade-in-out show`}>{(champData[Object.keys(champData)[0]]["spells"]["1"]["description"])}</p>}
+                </>
+                :
+                <>
+                  {<p className={`slide-in-out-fade-in-out hide`}>{(champData[Object.keys(champData)[0]]["spells"]["1"]["description"])}</p>}
+                </>}
 
 
                 <div className="skills">
@@ -318,7 +333,14 @@ export default function League() {
                   </div>
                   <p className='league-info' style={{marginLeft:'10px'}}>{(champData[Object.keys(champData)[0]]["spells"]["2"]["name"])} </p>
                 </div>
-                {showSkill3 && <p className='league-info' >{(champData[Object.keys(champData)[0]]["spells"]["1"]["description"])}</p>}
+                {showSkill3 ?
+                <>
+                  {<p className={`slide-in-out-fade-in-out show`}>{(champData[Object.keys(champData)[0]]["spells"]["2"]["description"])}</p>}
+                </>
+                :
+                <>
+                  {<p className={`slide-in-out-fade-in-out hide`}>{(champData[Object.keys(champData)[0]]["spells"]["2"]["description"])}</p>}
+                </>}
 
 
                 <div className="skills">
@@ -328,7 +350,14 @@ export default function League() {
                   </div>
                   <p className='league-info' style={{marginLeft:'10px'}}>{(champData[Object.keys(champData)[0]]["spells"]["3"]["name"])} </p>
                 </div>
-                {showSkill4 && <p className='league-info' >{(champData[Object.keys(champData)[0]]["spells"]["1"]["description"])}</p>}
+                {showSkill4 ?
+                <>
+                  {<p className={`slide-in-out-fade-in-out show`}>{(champData[Object.keys(champData)[0]]["spells"]["3"]["description"])}</p>}
+                </>
+                :
+                <>
+                  {<p className={`slide-in-out-fade-in-out hide`}>{(champData[Object.keys(champData)[0]]["spells"]["3"]["description"])}</p>}
+                </>}
               </section>
               
             </div>

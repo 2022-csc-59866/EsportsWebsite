@@ -181,10 +181,35 @@
     text-shadow: 3px 3px 3px black;
     pointer-events: none;
     margin:0;
-    transition: all 0.3s ease-in-out;
+    opacity: 0.7;
   }
 
   .show-skill {
     position: relative;
     display: inline-block;
+  }
+  
+  .slide-in-out-fade-in-out {
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+    transform: translateY(-20%);
+    opacity: 0;
+    font-family: 'Manrope';
+    font-size:x-large;
+    color: white;
+    text-shadow: none;
+    margin:5px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .slide-in-out-fade-in-out.show {
+    transform: translateY(0);
+    opacity: 1;
+    
+  }
+  
+  .slide-in-out-fade-in-out.hide {
+    height: 0;
+    margin: 0;
+    padding: 0;
   }
