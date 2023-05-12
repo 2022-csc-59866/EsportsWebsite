@@ -10,6 +10,7 @@ import Careers from './Components/Careers';
 import ContactUs from "./Components/ContactUs";
 import Profile from './Components/Profile';
 import Footer from './Components/Footer';
+import Login from './Components/Login';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path="/careers" element={<Careers/>}/>
           <Route path="/contact" element={<ContactUs/>}/>
           <Route path="/profile" element={<Profile/>}/>
+          <Route path="/login" element={<Login/>}/>
         </Routes>
       </div>
       <Footer/>

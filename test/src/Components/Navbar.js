@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Link, useMatch, useResolvedPath } from "react-router-dom";
-import { Login } from './Login';
 import { User } from './User';
 
 export default function Navbar() {
@@ -21,7 +20,7 @@ export default function Navbar() {
                 <CustomLink to="/contact">Contact Us</CustomLink>
             </li>
             <li>
-                <Login/>
+                <CustomLink to="/login">Sign In</CustomLink>
             </li>
             <li>
                 <User onClick={() => {setOpen(!open)}}/>

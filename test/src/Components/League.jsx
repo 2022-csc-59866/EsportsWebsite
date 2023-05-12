@@ -35,7 +35,7 @@ export default function League() {
   const [isHovered3, setIsHovered3] = useState(false);
   const [isHovered4, setIsHovered4] = useState(false);
   const apiCalledRef = useRef(false); //To prevent repeating API calls
-  const API_KEY = "RGAPI-42b60ff6-3953-43fa-b4fc-4fb9e08c06e8"; //API Key
+  const API_KEY = "RGAPI-4dd164ea-391a-4d1a-954a-b827fb80e4c0"; //API Key
 
   useEffect(() => {
     const fetchData = async () => {
@@ -268,7 +268,6 @@ export default function League() {
         }
       </div>
       
-
       <div className='league-champs'>
         <h3>Champions</h3>
         <h4 className="champ-description">Look for your favorite champions!</h4>
