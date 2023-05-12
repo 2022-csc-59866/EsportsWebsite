@@ -48,10 +48,6 @@ export default function Home() {
         </div>
       </div>
       </div>
-
-      <footer style={{ backgroundColor: '#333', color: '#fff', textAlign: 'center', padding: '20px' }}>
-      <p>This is the footer content</p>
-      </footer>
       </div>
   );
 }

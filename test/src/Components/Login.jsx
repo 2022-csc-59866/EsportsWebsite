@@ -27,7 +27,7 @@ export default function Login() {
         <div className="login-form">
             <h2>Sign In</h2>
             <input type="email" placeholder="Email" value={email} onChange={(event) => setEmail(event.target.value)}/>
-            <input type="password" placeholder="Password" value={password} onChange={(event) => setPassword(event.target.value)}/>
+            <input type="password" placeholdeqr="Password" value={password} onChange={(event) => setPassword(event.target.value)}/>
             <button>Sign In</button>
             <button>Register</button>
             {/* {(typeof data.members === 'undefined') ? (
