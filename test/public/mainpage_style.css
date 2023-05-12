@@ -7,7 +7,7 @@ body {
     color: greenyellow;
 }
 
-h1, p {
+h1, h2, h3, ul, p {
     font-family: 'Games', sans-serif;
 }
 
