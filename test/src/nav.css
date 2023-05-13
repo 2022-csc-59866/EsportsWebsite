@@ -26,21 +26,21 @@ body {
     color: greenyellow;
     display: flex;
     justify-content: space-between;
-    align-items: stretch;
-    gap: 2rem;
-    padding: 0 1rem;
+    gap: 2.2rem;
+    padding: 0 1.5rem;
 }
 
 .site-title {
     font-size: 3rem;
     font-family: 'Manrope';
     margin: 10px;
-    transition:ease-in-out 0.4s;
+    padding: 20px 0;
+    transition: ease-in-out 0.4s;
     border-radius: 20px;
 }
 
 .site-title:hover {
-    background-color: #777;
+    background-color: #2a9df4;
     border-radius: 10px;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
@@ -73,16 +73,16 @@ body {
 }
 
 .nav li.active {
-    background-color: #555;
+    background-color: #187bcd;
     border-radius: 20px;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-    color: white;
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+    color: rgb(13, 206, 13);
 }
 
 .nav li:hover {
-    background-color: #777;
-    border-radius: 30px;
+    background-color: #2a9df4;
+    border-radius: 25px;
     padding-left: 0.125rem;
     padding-right: 0.125rem;
 }
