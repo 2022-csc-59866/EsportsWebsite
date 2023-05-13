@@ -1,16 +1,11 @@
-import React, {useState, useEffect} from "react";
-import { useAuth0 } from "@auth0/auth0-react";
+import React, { useState } from "react";
 import { Link } from 'react-router-dom';
-import 'bootstrap/dist/css/bootstrap.min.css'
 import httpclient from "../httpclient";
 import './Login.css';
 
 export default function Login() {
-    const { data, setData} = useState([{}])
-    const { loginWithRedirect, isAuthenticated, isLoading } = useAuth0();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [authenticated, setAuthenticated] = useState(false)
 
     const logInUser = async () => {
         console.log(email, password);
@@ -21,8 +16,6 @@ export default function Login() {
             password,
           });
           window.location.href = "/";
-          setAuthenticated(true);
-          console.log(authenticated)
         } catch (error) {
           if (error.response.status === 401) {
             alert("Invalid credentials");
@@ -30,16 +23,7 @@ export default function Login() {
         }
       };
 
-    if (isLoading) {
-        return <div>Loading ...</div>;
-    }
-
     return (
-        // !isAuthenticated && (
-        //     <div>
-        //         <button className="log-btn" onClick={() => loginWithRedirect()}>Sign In</button> 
-        //     </div>
-        // )
         <div className="login-form">
 
                 <h1>Sign In</h1>
@@ -62,23 +46,6 @@ export default function Login() {
                         </Link>
                     </div>
                 </form>
-            
-
-            {/* <h2>Sign In</h2>
-            <input type="email" placeholder="Email" value={email} onChange={(event) => setEmail(event.target.value)}/>
-            <input type="password" placeholder="Password" value={password} onChange={(event) => setPassword(event.target.value)}/>
-            <div> 
-                <a href="/login"><button>Sign In</button></a>
-                <a href="/register"><button>Register</button></a>
-            </div> */}
-            
-                    {/* {(typeof data.members === 'undefined') ? (
-                        <p>Loading...</p>
-                    ): (
-                        data.members.map((members, i) => (
-                            <p key={i}>{members}</p>
-                        ))
-                    )} */}
         </div>
         
     )
