@@ -33,7 +33,7 @@ body {
 
 .site-title {
     font-size: 3rem;
-    font-family: 'Games';
+    font-family: 'Manrope';
     margin: 10px;
     transition:ease-in-out 0.4s;
     border-radius: 20px;
@@ -49,12 +49,12 @@ body {
 
 .nav ul {
     padding: 0;
-    margin: 10px;
+    margin: 20px;
     height: 100%;
     list-style: none;
     display: flex;
     gap: 1rem;
-    font-family:'Cocogoose';
+    font-family:'Manrope';
     font-size: 2rem;
 }
 
