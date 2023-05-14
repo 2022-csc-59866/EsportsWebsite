@@ -1,22 +1,47 @@
-import React from "react";
-import { useAuth0 } from "@auth0/auth0-react";
+import React, { useState, useEffect } from "react";
+import httpclient from "../httpclient";
+import './Login.css';
+
+const user = {
+    id: '',
+    email: '',
+}
 
 export default function Profile() {
-    const { user, isLoading, isAuthenticated } = useAuth0();
+    const [user, setUser] = useState(null);
 
-    if (isLoading) {
-        return <div>Loading ...</div>;
-    }
+    const logoutUser = async () => {
+        await httpclient.post("//localhost:5000/logout");
+        window.location.href = "/";
+    };
+
+    useEffect(() => {
+        (async () => {
+          try {
+            const resp = await httpclient.get("//localhost:5000/@me");
+            setUser(resp.data);
+          } catch (error) {
+            console.log("Not authenticated");
+          }
+        })();
+    }, []);
+
 
     return (
-        isAuthenticated && (
             <div>
                 <h1>Profile</h1>
-                <img src={user.picture} alt='' className="circle-pic"/>
-                <h2>{user.nickname}</h2>
-                <p>Email: {user.email}</p>
-                <p>Birthday: {user.birthdate}</p>
+                {user != null ? 
+                (
+                    <>
+                        <h2>ID: {user.id}</h2> 
+                        <h2>Email: {user.email} </h2>
+                        <button className="login-btn" onClick={logoutUser}>Sign Out</button>
+                    </>
+                ) 
+                :
+                (
+                    <h2>Cannot find user.</h2>
+                )}
             </div>
-        )
     );
 }
