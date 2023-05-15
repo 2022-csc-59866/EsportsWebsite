@@ -1,9 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import httpclient from "../httpclient";
 import './Footer.css';
 
 function Footer() {
-  return (
+    const [email, setEmail] = useState('');
+
+    const joinList = async () => {
+        try {
+            const response = await httpclient.post("//localhost:5000/subscription", {
+            email,
+          });
+        } catch (error) {
+          if (error.response.status === 401) {
+            alert("Invalid email");
+          }
+        }
+    };
+
+    return (
     <div className='footer-container'>
         <section className='footer-subscription'>
             <p className='footer-subscription-heading'>
@@ -14,8 +29,8 @@ function Footer() {
             </p>
             <div className='input-areas'>
                 <form>
-                    <input type="email" name="email" placeholder='Email address' className="footer-input" />
-                    <button className='subscribe'>Subscribe</button>
+                    <input onChange={(e) => setEmail(e.target.value)} type="email" name="email" placeholder='Email address' className="footer-input" />
+                    <button onClick={() => joinList()} className='subscribe'>Subscribe</button>
                 </form>
             </div>
         </section>
@@ -35,7 +50,7 @@ function Footer() {
             </div>
         </div>
     </div>
-  )
+    )
 }
 
 export default Footer
