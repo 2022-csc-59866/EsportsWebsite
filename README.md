@@ -10,15 +10,16 @@ Frontend: Run npm install
 
 Instructions:
 Backend server: 
-Step 1) Run cd flask-server in terminal
+Step 1) Run cd flask-server on terminal
 Step 2) python server.py
 
 Frontend server:
-Step 1) Run cd test in temrinal
+Step 1) Run cd test on temrinal
 Step 2) npm start
 
 Redis server:
 To run on windows: follow https://redis.io/docs/getting-started/installation/install-redis-on-windows/
+WSL: Run cd flask-server, Run cedis-cli on terminal
 
 Technology Used:
 Front End: React, CSS
