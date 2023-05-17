@@ -11,7 +11,7 @@ export default function Login() {
         console.log(email, password);
     
         try {
-          const resp = await httpclient.post("//localhost:5000/login", {
+          const response = await httpclient.post("//localhost:5000/login", {
             email,
             password,
           });
@@ -21,7 +21,7 @@ export default function Login() {
             alert("Invalid credentials");
           }
         }
-      };
+    };
 
     return (
         <div className="login-form">
@@ -29,11 +29,11 @@ export default function Login() {
                 <form>
                     <div>
                         <label>Email </label>
-                        <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email Address" id=""></input>
+                        <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email Address"></input>
                     </div>
                     <div>
                         <label>Password </label>
-                        <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Password" id=""></input>
+                        <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Password"></input>
                     </div>
                     <button className="login-btn" type="button" onClick={() => logInUser()}>
                         Sign In
@@ -49,6 +49,5 @@ export default function Login() {
                   <Google />
                 </div>
         </div>
-        
     )
 }

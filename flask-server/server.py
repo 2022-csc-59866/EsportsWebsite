@@ -1,11 +1,11 @@
-from flask import Flask, render_template, request, abort, jsonify, session, redirect, url_for
+from flask import Flask, request, abort, jsonify, session, redirect, url_for
 from flask_login import LoginManager, UserMixin, login_required, login_user, logout_user
 from flask_bcrypt import Bcrypt 
 from flask_session import Session
 from flask_cors import CORS
 from config import ApplicationConfig
 import os
-from models import db, User
+from models import db, User, Message, Subscription, Careers
 
 app=Flask(__name__)
 CORS(app, supports_credentials=True)
@@ -78,5 +78,37 @@ def register_user():
         "email" : new_user.email
     })
 
-if __name__ == "__main__": 
+@app.route('/message', methods=["POST"])
+def enter_message():
+    email = request.json["email"]
+    full_name = request.json["full_name"]
+    subject = request.json["subject"]
+    message = request.json["message"]
+
+    message = Message(email=email, full_name=full_name, subject=subject, message=message)
+    db.session.add(message)
+    db.session.commit()
+    return "200"
+
+@app.route('/subscription', methods=["POST"])
+def join_list():
+    email = request.json["email"]
+
+    subscription = Subscription(email=email)
+    db.session.add(subscription)
+    db.session.commit()
+    return "200"
+
+@app.route('/careers', methods=["POST"])
+def apply_job():
+    email = request.json["email"]
+    full_name = request.json["full_name"]
+    position = request.json["position"]
+
+    careers = Careers(email=email, full_name=full_name, position=position)
+    db.session.add(careers)
+    db.session.commit()
+    return "200"
+
+if __name__ == "__main__":
     app.run(debug=True) 

@@ -1,5 +1,6 @@
 import { Container, Row, Col, Carousel, Button, Modal, Card, CardGroup} from 'react-bootstrap';
 import React, { useState } from 'react';
+import httpclient from "../httpclient";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 
@@ -110,6 +111,25 @@ function CareerCardGroup() {
 }
 
 export default function Careers() {
+  const [full_name, setFullName] = useState('');
+  const [email, setEmail] = useState('');
+  const [position, setPosition] = useState('');
+  const [filedata, setFileData] = useState();
+
+  const handleSubmit = async (e) => {
+    try {
+      const response = await httpclient.post("//localhost:5000/careers", {
+        email,
+        full_name,
+        position
+      });
+    } catch (error) {
+      if (error.response.status === 401) {
+        alert("Invalid information");
+      }
+    }
+  };
+  
   return (
     <Container>
       <Row>
@@ -121,7 +141,7 @@ export default function Careers() {
       <Row style={{color: 'greenyellow'}}>
         <Col md={6}>
           <h3>Open Positions</h3>
-          <ul>
+          <ul style={{listStyle:"none"}}>
             <li>Esports Analyst</li>
             <li>Marketing Manager</li>
             <li>Esports Coach</li>
@@ -130,15 +150,15 @@ export default function Careers() {
         </Col>
         <Col md={6}>
           <h3 >Apply Now</h3>
-          <form>
+          <form onSubmit={handleSubmit}>
             <div className="form-group">
-              <input type="text" className="form-control" placeholder="Name" />
+              <input style={{margin:"5px"}} onChange={(e) => setFullName(e.target.value)} type="text" className="form-control" placeholder="Name" />
             </div>
             <div className="form-group">
-              <input type="email" className="form-control" placeholder="Email" />
+              <input style={{margin:"5px"}} onChange={(e) => setEmail(e.target.value)} type="email" className="form-control" placeholder="Email" />
             </div>
             <div className="form-group">
-              <input type="text" className="form-control" placeholder="Position" />
+              <input style={{margin:"5px"}} onChange={(e) => setPosition(e.target.value)}  type="text" className="form-control" placeholder="Position" />
             </div>
             <div className="form-group">
               <input type="file" className="form-control-file" />
