@@ -2,6 +2,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import './home.css';
 
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min';
+import './home.css';
+
 export default function Home() {
   return (
       <div>
@@ -48,10 +52,6 @@ export default function Home() {
         </div>
       </div>
       </div>
-
-      <footer style={{ backgroundColor: '#333', color: '#fff', textAlign: 'center', padding: '20px' }}>
-      <p>This is the footer content</p>
-      </footer>
       </div>
   );
 }

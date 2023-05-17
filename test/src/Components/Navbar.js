@@ -1,9 +1,30 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useMatch, useResolvedPath } from "react-router-dom";
 import { User } from './User';
+import httpclient from "../httpclient";
+
+const user = {
+    id: '',
+    email: '',
+}
 
 export default function Navbar() {
     const [open, setOpen] = useState(false);
+    const [user, setUser] = useState(null);
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+    useEffect(() => {
+        (async (event) => {
+          try {
+            const resp = await httpclient.get("//localhost:5000/@me");
+            setUser(resp.data);
+            setIsLoggedIn(true);
+          } catch (error) {
+            console.log("Not authenticated");
+          }
+        })();
+    }, []);
+
     return <nav className="nav">
         <Link to="/" className="site-title">Esports Frenzy</Link>
         <ul>
@@ -20,7 +41,15 @@ export default function Navbar() {
                 <CustomLink to="/contact">Contact Us</CustomLink>
             </li>
             <li>
-                <CustomLink to="/login">Sign In</CustomLink>
+                {isLoggedIn && (user != null) ? 
+                (
+                    <CustomLink to="/profile">{user.email}</CustomLink> 
+                ) 
+                :
+                (
+                    <CustomLink to="/auth">Sign In</CustomLink>
+                )}
+               
             </li>
             <li>
                 <User onClick={() => {setOpen(!open)}}/>

@@ -11,6 +11,7 @@ import ContactUs from "./Components/ContactUs";
 import Profile from './Components/Profile';
 import Footer from './Components/Footer';
 import Login from './Components/Login';
+import Register from './Components/Register';
 
 function App() {
   return (
@@ -24,7 +25,8 @@ function App() {
           <Route path="/careers" element={<Careers/>}/>
           <Route path="/contact" element={<ContactUs/>}/>
           <Route path="/profile" element={<Profile/>}/>
-          <Route path="/login" element={<Login/>}/>
+          <Route path="/auth" element={<Login/>}/>
+          <Route path="/register" element={<Register/>}/>
         </Routes>
       </div>
       <Footer/>

@@ -1,42 +1,53 @@
-import React, {useState, useEffect} from "react";
-import { useAuth0 } from "@auth0/auth0-react";
-import './Login.css';
+import React, { useState } from "react";
+import { Link } from 'react-router-dom';
+import httpclient from "../httpclient";
+import Google from "./Google";
 
 export default function Login() {
-    const { data, setData} = useState([{}])
-    const { loginWithRedirect, isAuthenticated, isLoading } = useAuth0();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
-    useEffect(() => {
-        fetch('http://localhost:5000/members')
-            .then(response => response.json())
-            .then(data => console.log(data));
-    }, [data])
-
-    if (isLoading) {
-        return <div>Loading ...</div>;
-    }
+    const logInUser = async () => {
+        console.log(email, password);
+    
+        try {
+          const response = await httpclient.post("//localhost:5000/login", {
+            email,
+            password,
+          });
+          window.location.href = "/";
+        } catch (error) {
+          if (error.response.status === 401) {
+            alert("Invalid credentials");
+          }
+        }
+    };
 
     return (
-        // !isAuthenticated && (
-        //     <div>
-        //         <button className="log-btn" onClick={() => loginWithRedirect()}>Sign In</button> 
-        //     </div>
-        // )
         <div className="login-form">
-            <h2>Sign In</h2>
-            <input type="email" placeholder="Email" value={email} onChange={(event) => setEmail(event.target.value)}/>
-            <input type="password" placeholder="Password" value={password} onChange={(event) => setPassword(event.target.value)}/>
-            <button>Sign In</button>
-            <button>Register</button>
-            {/* {(typeof data.members === 'undefined') ? (
-                <p>Loading...</p>
-            ): (
-                data.members.map((members, i) => (
-                    <p key={i}>{members}</p>
-                ))
-            )} */}
+                <h1>Sign In</h1>
+                <form>
+                    <div>
+                        <label>Email </label>
+                        <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email Address"></input>
+                    </div>
+                    <div>
+                        <label>Password </label>
+                        <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Password"></input>
+                    </div>
+                    <button className="login-btn" type="button" onClick={() => logInUser()}>
+                        Sign In
+                    </button>
+                    <div className="register-label">
+                        <h5>Don't have an account?</h5>
+                        <Link to="/register">
+                        <button className="login-btn">Register here</button>
+                        </Link>
+                    </div>
+                </form>
+                <div style={{ textAlign: "center", padding: '20px' }}>
+                  <Google />
+                </div>
         </div>
     )
 }
