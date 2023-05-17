@@ -1,8 +1,10 @@
-from flask import Flask, render_template, request, abort, jsonify, session
+from flask import Flask, render_template, request, abort, jsonify, session, redirect, url_for
+from flask_login import LoginManager, UserMixin, login_required, login_user, logout_user
 from flask_bcrypt import Bcrypt 
 from flask_session import Session
 from flask_cors import CORS
 from config import ApplicationConfig
+import os
 from models import db, User
 
 app=Flask(__name__)
@@ -21,7 +23,7 @@ def get_current_user():
     user_id = session.get("user_id")
 
     if not user_id:
-        return jsonify({"error" : "Unauthorized"}), 401
+        return jsonify({"error" : "UnauthorizeSd"}), 401
 
     user = User.query.filter_by(id=user_id).first()
     return jsonify({
@@ -48,7 +50,6 @@ def login_user():
         "id" : user.id,
         "email" : user.email
     })
-
 
 @app.route('/logout', methods=["POST"])
 def logout_user():
@@ -77,5 +78,5 @@ def register_user():
         "email" : new_user.email
     })
 
-if __name__ == "__main__":
+if __name__ == "__main__": 
     app.run(debug=True) 
