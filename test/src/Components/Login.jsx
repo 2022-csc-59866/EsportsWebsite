@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from 'react-router-dom';
 import httpclient from "../httpclient";
-import './Login.css';
+import Google from "./Google";
 
 export default function Login() {
     const [email, setEmail] = useState('');
@@ -25,7 +25,6 @@ export default function Login() {
 
     return (
         <div className="login-form">
-
                 <h1>Sign In</h1>
                 <form>
                     <div>
@@ -46,6 +45,9 @@ export default function Login() {
                         </Link>
                     </div>
                 </form>
+                <div style={{ textAlign: "center", padding: '20px' }}>
+                  <Google />
+                </div>
         </div>
     )
 }
