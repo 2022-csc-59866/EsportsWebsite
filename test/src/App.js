@@ -1,27 +1,36 @@
-//import logo from './logo.svg';
 import React from 'react';
 import {Routes, Route} from "react-router-dom";
 import './App.css';
 import './nav.css';
-import Home from "./Home";
-import About from "./About";
-import ContactUs from "./ContactUs";
-import Navbar from './Navbar';
-import League from './League';
+import Navbar from './Components/Navbar';
+import Home from "./Components/Home";
+import About from "./Components/About";
+import League from './Components/League';
+import Careers from './Components/Careers';
+import ContactUs from "./Components/ContactUs";
+import Profile from './Components/Profile';
+import Footer from './Components/Footer';
+import Login from './Components/Login';
+import Register from './Components/Register';
 
 function App() {
   return (
-    <>
+    <div className='App'>
       <Navbar/>
       <div className='container'>
         <Routes>
           <Route path="/" element={<Home/>}/>
           <Route path="/about" element={<About/>}/>
-          <Route path="/contact" element={<ContactUs/>}/>
           <Route path="/lol" element={<League/>}/>
+          <Route path="/careers" element={<Careers/>}/>
+          <Route path="/contact" element={<ContactUs/>}/>
+          <Route path="/profile" element={<Profile/>}/>
+          <Route path="/auth" element={<Login/>}/>
+          <Route path="/register" element={<Register/>}/>
         </Routes>
       </div>
-    </>
+      <Footer/>
+    </div>
   )
 }
 

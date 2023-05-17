@@ -1,3 +1,92 @@
+.App {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow: auto;
+}
+
+@font-face {
+  font-family: 'Games';
+  src: url(Fonts/Games.woff);
+}
+
+@font-face {
+  font-family: 'Cocogoose';
+  src: url(Fonts/Manrope.ttf);
+}
+
+@font-face {
+  font-family: 'CapsuleX';
+  src: url(Fonts/CapsuleX.otf);
+}
+
+@font-face {
+  font-family: 'Manrope';
+  src: url(Fonts/Manrope.ttf);
+}
+
+@font-face {
+  font-family: 'Quicksand';
+  src: url(Fonts/Quicksand.ttf);
+}
+
+.auth-form-container, .login-form, .register-form {
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  font-family: 'Cocogoose', sans-serif;
+  text-shadow: 3px 3px 3px blue;
+}
+
+.auth-form-container {
+  padding: 4rem;
+  border: 0px transparent;
+  background-image: linear-gradient(120deg, blue, purple, maroon);
+  border-radius: 20px;
+  display: inline-block;
+  box-shadow: 0px 10px 0.6em black;
+}
+
+label {
+  text-align: left;
+  padding: 0.25rem 0;
+}
+
+input {
+  margin: 0.5rem 0;
+  padding: 1rem;
+  border: none;
+  border-radius: 10px;
+  font-family: 'Cocogoose';
+}
+
+button {
+  border: none;
+  background-color: blue;
+  padding: 5px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  color: white;
+  font-family: 'Cocogoose';
+  font-size: xx-large;
+  transition:ease-in-out 0.4s;
+}
+
+button:hover {
+  background-color: #777;
+  border-radius: 30px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.link-btn {
+  background: none;
+  color: white;
+  text-decoration: underline;
+  font-size: small;
+}
+
 .html {
   scroll-behavior: smooth;
 }
@@ -7,8 +96,23 @@ body {
   color: greenyellow;
 }
 
-h1, p {
-  font-family: 'Games', sans-serif;
+h1, h2, h3 {
+  font-family: 'Cocogoose';
+  text-shadow: 3px 3px 3px blue;
+  margin:5px;
+  color: greenyellow;
+}
+
+p {
+  font-family: 'CapsuleX';
+  text-shadow: 3px 3px 3px blue;
+  color: greenyellow;
+}
+
+.profile {
+  font-family: "Cocogoose";
+  text-shadow: none;
+  margin: 0px;
 }
 
 /* Image 1 Contanier */
@@ -20,7 +124,7 @@ h1, p {
   filter: contrast(100%);
   display: block;
   width: 100%;
-  height: 500px;
+  height: 1000px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -41,6 +145,14 @@ h1, p {
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 2em;
+}
+
+.circle-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 5px solid #777;
 }
 
 @media screen {

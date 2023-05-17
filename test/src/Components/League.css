@@ -1,0 +1,217 @@
+.league-bg {
+    background-image: url("../Images/league.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    object-fit: contain;
+    border-radius: 30px;
+    padding-top: 10px;
+  }
+  
+  .league-search {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .league-info {
+    font-family: 'Manrope';
+    font-size:x-large;
+    color: white;
+    text-shadow: none;
+    margin:5px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .league-pfp {
+    width: 150px;
+    height: 150px;
+    border-radius: 30px;
+    border: 5px solid #777;
+    box-shadow: 0px 10px 0.6em black;
+  }
+  
+  .league-table {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 30px;
+    margin: 20px;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .league-profile {
+    display: flex;
+    padding: 10px;
+  }
+  
+  .league-name {
+    text-align: center;
+    margin-left: 30px;
+    margin-top: 10px;
+    justify-content: center;
+  }
+
+  .server {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 30px;
+    padding-left:15px;
+    padding-right: 15px;
+    margin-top: 10px;
+  }
+
+  .server-name {
+    font-family: 'Cocogoose';
+    margin-top:20px;
+    margin-bottom: 0;
+  }
+
+  .lol-bar {
+    font-size: large;
+    border-radius: 20px;
+  }
+
+  .lol-btn {
+    font-size: x-large;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .lol-status {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding: 0;
+    border: 0;
+  }
+  
+  .green-circle {
+    border-radius: 50%;
+    background-color: #00ff00;
+    width: 35px;
+    height: 35px;
+    margin-left: 10px;
+  }
+  
+  .red-circle {
+    border-radius: 50%;
+    background-color: #ff0000;
+    width: 35px;
+    height: 35px;
+    margin-left: 10px;
+  }
+
+  .champ-description {
+    margin: 0;
+    text-shadow: 3px 3px 3px blue;
+  }
+
+  .league-champs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .champ-img {
+    border-radius: 30px;
+    border: 5px solid #777;
+    box-shadow: 0px 10px 0.6em black;
+    object-fit: cover;
+    height: 705px;
+    width: 308px;
+    background-color: gray;
+    display: block;
+  }
+
+  .champ-img img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  .champ-table {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 30px;
+    margin: 20px;
+    padding: 30px;
+    width: 55%;
+    height:min-content;
+    text-align: left;
+  }
+
+  .champ-stats {
+    text-align: left;
+    margin-left: 30px;
+    justify-content: center;
+  }
+
+  .skills {
+    display: flex;
+    margin-top:10px;
+    align-items: center;
+  }
+
+  .skill-img {
+    border-radius: 15px;
+    border: 2px solid #777;
+    box-shadow: 0px 10px 0.6em black;
+    object-fit: cover;
+    transition:ease-in-out 0.2s;
+  }
+
+  .skill-img:hover {
+    opacity: 0.7;
+  }
+
+  .skill-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Manrope';
+    font-size:50px;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    text-shadow: 3px 3px 3px black;
+    pointer-events: none;
+    margin:0;
+    opacity: 0.7;
+  }
+
+  .show-skill {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .slide-in-out-fade-in-out {
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+    transform: translateY(-20%);
+    opacity: 0;
+    font-family: 'Manrope';
+    font-size:x-large;
+    color: white;
+    text-shadow: none;
+    margin:5px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .slide-in-out-fade-in-out.show {
+    transform: translateY(0);
+    opacity: 1;
+    
+  }
+  
+  .slide-in-out-fade-in-out.hide {
+    height: 0;
+    margin: 0;
+    padding: 0;
+  }

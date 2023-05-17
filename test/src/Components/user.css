@@ -1,0 +1,30 @@
+.user-items {
+    display:flex;
+    list-style: none;
+    text-align: center;
+    width: 10rem;
+    justify-content: flex-start;
+    position:fixed;
+    flex-direction: column;
+    
+}
+
+.user-items li {
+    background: rgb(0, 212, 212);
+    cursor: pointer;
+    height: 3rem;
+    width: 8rem;
+    border-radius: 10px;
+    margin-left: 5px;
+    margin: 0px;
+    font-size: x-large;
+    justify-content: center;
+    transform: translateY(10px);
+}
+
+.user-items.clicked {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-20px);
+    transition: var(--speed) ease;
+}
