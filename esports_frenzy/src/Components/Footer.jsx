@@ -8,7 +8,7 @@ function Footer() {
 
     const joinList = async () => {
         try {
-            const response = await httpclient.post("//localhost:5000/subscription", {
+            await httpclient.post("//localhost:5000/subscription", {
             email,
           });
         } catch (error) {
