@@ -1,5 +1,4 @@
 from flask import Flask, request, abort, jsonify, session, redirect, url_for
-from flask_login import LoginManager, UserMixin, login_required, login_user, logout_user
 from flask_bcrypt import Bcrypt 
 from flask_session import Session
 from flask_cors import CORS
