@@ -3,11 +3,6 @@ import { Link, useMatch, useResolvedPath } from "react-router-dom";
 import { User } from './User';
 import httpclient from "../httpclient";
 
-const user = {
-    id: '',
-    email: '',
-}
-
 export default function Navbar() {
     const [open, setOpen] = useState(false);
     const [user, setUser] = useState(null);

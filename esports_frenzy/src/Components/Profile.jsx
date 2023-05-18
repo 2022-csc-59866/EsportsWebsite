@@ -2,11 +2,6 @@ import React, { useState, useEffect } from "react";
 import httpclient from "../httpclient";
 import './Login.css';
 
-const user = {
-    id: '',
-    email: '',
-}
-
 export default function Profile() {
     const [user, setUser] = useState(null);
 

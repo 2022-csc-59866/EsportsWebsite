@@ -11,7 +11,7 @@ export default function Login() {
         console.log(email, password);
     
         try {
-          const response = await httpclient.post("//localhost:5000/register", {
+          await httpclient.post("//localhost:5000/register", {
             email,
             password,
           });
