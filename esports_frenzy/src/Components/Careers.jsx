@@ -114,11 +114,10 @@ export default function Careers() {
   const [full_name, setFullName] = useState('');
   const [email, setEmail] = useState('');
   const [position, setPosition] = useState('');
-  const [filedata, setFileData] = useState();
 
   const handleSubmit = async (e) => {
     try {
-      const response = await httpclient.post("//localhost:5000/careers", {
+      await httpclient.post("//localhost:5000/careers", {
         email,
         full_name,
         position

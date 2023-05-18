@@ -9,7 +9,7 @@ export default function ContactUs() {
 
   const enterMessage = async () => {
     try {
-      const response = await httpclient.post("//localhost:5000/message", {
+      await httpclient.post("//localhost:5000/message", {
         email,
         full_name,
         subject,
