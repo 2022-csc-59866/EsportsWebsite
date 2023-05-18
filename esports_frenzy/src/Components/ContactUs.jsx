@@ -9,7 +9,7 @@ export default function ContactUs() {
 
   const enterMessage = async () => {
     try {
-      await httpclient.post("//localhost:5000/message", {
+      await httpclient.post("https://esports-frenzy-flask.onrender.com/message", {
         email,
         full_name,
         subject,

@@ -11,7 +11,7 @@ export default function Navbar() {
     useEffect(() => {
         (async (event) => {
           try {
-            const resp = await httpclient.get("//localhost:5000/@me");
+            const resp = await httpclient.get("https://esports-frenzy-flask.onrender.com/@me");
             setUser(resp.data);
             setIsLoggedIn(true);
           } catch (error) {

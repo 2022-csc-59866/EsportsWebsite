@@ -117,7 +117,7 @@ export default function Careers() {
 
   const handleSubmit = async (e) => {
     try {
-      await httpclient.post("//localhost:5000/careers", {
+      await httpclient.post("https://esports-frenzy-flask.onrender.com/careers", {
         email,
         full_name,
         position

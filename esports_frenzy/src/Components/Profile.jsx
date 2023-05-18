@@ -6,14 +6,14 @@ export default function Profile() {
     const [user, setUser] = useState(null);
 
     const logoutUser = async () => {
-        await httpclient.post("//localhost:5000/logout");
+        await httpclient.post("https://esports-frenzy-flask.onrender.com/logout");
         window.location.href = "/";
     };
 
     useEffect(() => {
         (async () => {
           try {
-            const resp = await httpclient.get("//localhost:5000/@me");
+            const resp = await httpclient.get("https://esports-frenzy-flask.onrender.com/@me");
             setUser(resp.data);
           } catch (error) {
             console.log("Not authenticated");
