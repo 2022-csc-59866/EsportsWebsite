@@ -110,4 +110,4 @@ def apply_job():
     return "200"
 
 if __name__ == "__main__":
-    app.run(debug=True) 
+    app.run() 
