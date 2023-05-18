@@ -11,7 +11,7 @@ export default function Login() {
         console.log(email, password);
     
         try {
-          await httpclient.post("//localhost:5000/register", {
+          await httpclient.post("https://esports-frenzy-flask.onrender.com/register", {
             email,
             password,
           });
