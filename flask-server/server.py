@@ -7,7 +7,7 @@ import os
 from models import db, User, Message, Subscription, Careers
 
 app=Flask(__name__)
-CORS(app, supports_credentials=True, origins=['https://esportsfrenzy.netlify.app'])
+CORS(app, supports_credentials=True)
 app.config.from_object(ApplicationConfig)
 
 bcrypt = Bcrypt(app) 
