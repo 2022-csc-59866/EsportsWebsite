@@ -1,5 +1,4 @@
 .league-bg {
-    background-image: url("../Images/league.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -80,6 +79,10 @@
     font-size: x-large;
     padding-left: 15px;
     padding-right: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-top: 10px;
+    border-radius: 30px;
   }
 
   .lol-status {
@@ -109,7 +112,6 @@
 
   .champ-description {
     margin: 0;
-    text-shadow: 3px 3px 3px blue;
   }
 
   .league-champs {

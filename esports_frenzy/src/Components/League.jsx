@@ -35,7 +35,7 @@ export default function League() {
   const [isHovered3, setIsHovered3] = useState(false);
   const [isHovered4, setIsHovered4] = useState(false);
   const apiCalledRef = useRef(false); //To prevent repeating API calls
-  const API_KEY = "RGAPI-6c60c89a-1aa9-4ba8-9999-30f24dda8366"; //API Key
+  const API_KEY = "RGAPI-0125110b-381a-4451-91be-4dc2dde91eb5"; //API Key
 
   useEffect(() => {
     const fetchData = async () => {
@@ -78,7 +78,6 @@ export default function League() {
       const response1 = await axios.get("https://na1.api.riotgames.com/lol/summoner/v4/summoners/by-name/" + searchText + "?api_key=" + API_KEY);
       setPlayerData(response1.data);
       setButtonClicked(true);
-      console.log(playerData)
     }
     catch (error) {
       console.log(error);

@@ -32,10 +32,10 @@ export default function Home() {
 
       <p>Here are some upcoming events!</p>
 
-      <div style={{  display: 'flex', margin: '50px' }}>
+      <div style={{  display: 'flex', margin: '50px', borderRadius: '30px' }}>
 
-      <div className="card" style={{ width: '45%', marginRight: '20px'}}>
-        <img src="https://resources.esportsinsider.com/esportsinsider/2022/11/ESI-Singapore-Generic-Announcement-1024x512px-medium_large.png" className="card-img-top" alt="Placeholder" />
+      <div className="card" style={{ width: '45%', marginRight: '20px', borderRadius: '30px'}}>
+        <img src="https://resources.esportsinsider.com/esportsinsider/2022/11/ESI-Singapore-Generic-Announcement-1024x512px-medium_large.png" className="card-img-top" style={{ borderRadius: '30px'}} alt="Placeholder" />
         <div className="card-body">
           <h5 className="card-title" style={{color: 'green'}}>The Future of Esports</h5>
           <p className="card-text" style={{color: 'lightgreen'}}>"Experience the exciting future of esports as we bring you top-notch programming, outstanding food and beverage options, and plenty of enjoyable networking opportunities over two unforgettable days in the Lion City."</p>
@@ -43,8 +43,8 @@ export default function Home() {
         </div>
       </div>
       
-      <div className="card" style={{ width: '45%'}}>
-        <img src="https://resources.esportsinsider.com/esportsinsider/2022/09/ESI-London-Sub-Event-Announcements-Trio_1600x900-medium_large.png" className="card-img-top" alt="Placeholder" />
+      <div className="card" style={{ width: '45%', borderRadius: '30px'}}>
+        <img src="https://resources.esportsinsider.com/esportsinsider/2022/09/ESI-London-Sub-Event-Announcements-Trio_1600x900-medium_large.png" className="card-img-top" style={{ borderRadius: '30px'}} alt="Placeholder" />
         <div className="card-body">
           <h5 className="card-title" style={{color: 'lightpink'}}>World's Esports Industry Festival</h5>
           <p className="card-text" style={{color: 'magenta'}}>"Experience the ultimate in networking, education, content, and hospitality in the esports and video game industry as #ESILDN makes its return to the UK's capital this Autumn, with exciting surprises in store."</p>

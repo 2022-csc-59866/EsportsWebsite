@@ -2,14 +2,18 @@
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
-    background-color: rgba(208, 0, 255, 0.7);
+    background-color: rgb(102,102,178);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 50px;
+    font-family: 'Manrope';
   }
   
 .article-image {
     max-width: 100%;
     height: auto;
     margin-bottom: 20px;
+    margin-top: 20px;
+    border-radius: 30px;
 }
 
 .article-title {
@@ -38,8 +42,8 @@
 .read-more-link {
     display: inline-block;
     padding: 10px 20px;
-    background-color: greenyellow;
-    color: blue;
+    background-color: rgb(166,182,241);
+    color: white;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 30px;
 }

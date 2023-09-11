@@ -3,7 +3,7 @@
 }
 
 body {
-    background-image: url('Images/image1.jpg');
+    background-color: rgb(147,147,255) ;
     background-size:cover;
     background-repeat: no-repeat;
     margin: 0;
@@ -22,12 +22,19 @@ body {
 }
 
 .nav {
-    background-color: darkblue;
-    color: greenyellow;
+    background-color: rgb(147,147,255);
+    box-shadow: 0px 5px 5px rgb(45,45,114);
+    width: 60%;
+    border-radius: 50px;
+    color: white;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     gap: 2.2rem;
-    padding: 0 1.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .site-title {
@@ -40,7 +47,6 @@ body {
 }
 
 .site-title:hover {
-    background-color: #2a9df4;
     border-radius: 10px;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
@@ -73,15 +79,14 @@ body {
 }
 
 .nav li.active {
-    background-color: #187bcd;
     border-radius: 20px;
     padding-left: 0.25rem;
     padding-right: 0.25rem;
-    color: rgb(13, 206, 13);
+    color: white;
 }
 
 .nav li:hover {
-    background-color: #2a9df4;
+    
     border-radius: 25px;
     padding-left: 0.125rem;
     padding-right: 0.125rem;
