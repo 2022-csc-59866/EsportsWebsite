@@ -35,7 +35,7 @@ export default function League() {
   const [isHovered3, setIsHovered3] = useState(false);
   const [isHovered4, setIsHovered4] = useState(false);
   const apiCalledRef = useRef(false); //To prevent repeating API calls
-  const API_KEY = "RGAPI-0125110b-381a-4451-91be-4dc2dde91eb5"; //API Key
+  const API_KEY = process.env.REACT_APP_LOL_API_KEY; //API Key
 
   useEffect(() => {
     const fetchData = async () => {
