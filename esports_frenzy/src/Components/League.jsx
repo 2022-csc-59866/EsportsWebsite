@@ -98,10 +98,10 @@ export default function League() {
     const getSkills = async () => {
       if (champButtonClicked) {
         apiCalledRef.current = true;
-        const skillResponse1 = await axios.get("http://ddragon.leagueoflegends.com/cdn/13.7.1/img/spell/" + (retrieveSkill1) + ".png")
-        const skillResponse2 = await axios.get("http://ddragon.leagueoflegends.com/cdn/13.7.1/img/spell/" + (retrieveSkill2) + ".png")
-        const skillResponse3 = await axios.get("http://ddragon.leagueoflegends.com/cdn/13.7.1/img/spell/" + (retrieveSkill3) + ".png")
-        const skillResponse4 = await axios.get("http://ddragon.leagueoflegends.com/cdn/13.7.1/img/spell/" + (retrieveSkill4) + ".png")
+        const skillResponse1 = await axios.get("https://ddragon.leagueoflegends.com/cdn/13.7.1/img/spell/" + (retrieveSkill1) + ".png")
+        const skillResponse2 = await axios.get("https://ddragon.leagueoflegends.com/cdn/13.7.1/img/spell/" + (retrieveSkill2) + ".png")
+        const skillResponse3 = await axios.get("https://ddragon.leagueoflegends.com/cdn/13.7.1/img/spell/" + (retrieveSkill3) + ".png")
+        const skillResponse4 = await axios.get("https://ddragon.leagueoflegends.com/cdn/13.7.1/img/spell/" + (retrieveSkill4) + ".png")
         setSkill1(skillResponse1.config.url);
         setSkill2(skillResponse2.config.url);
         setSkill3(skillResponse3.config.url);
@@ -121,11 +121,11 @@ export default function League() {
 
   const leagueChamps = async () => {
     try {
-      const champURL = "http://ddragon.leagueoflegends.com/cdn/13.7.1/data/en_US/champion/" + searchChamp + ".json"
+      const champURL = "https://ddragon.leagueoflegends.com/cdn/13.7.1/data/en_US/champion/" + searchChamp + ".json"
       let champResponse = await fetch(champURL)
       let responseJSON = await champResponse.json();
       setChampData(responseJSON.data);
-      setImgURL("http://ddragon.leagueoflegends.com/cdn/img/champion/loading/" + searchChamp + "_0.jpg")
+      setImgURL("https://ddragon.leagueoflegends.com/cdn/img/champion/loading/" + searchChamp + "_0.jpg")
       setRetrieveSkill1((JSON.stringify(responseJSON.data[Object.keys(responseJSON.data)[0]]["spells"]["0"]["id"])).replace(/"/g, ''))
       setRetrieveSkill2((JSON.stringify(responseJSON.data[Object.keys(responseJSON.data)[0]]["spells"]["1"]["id"])).replace(/"/g, ''))
       setRetrieveSkill3((JSON.stringify(responseJSON.data[Object.keys(responseJSON.data)[0]]["spells"]["2"]["id"])).replace(/"/g, ''))
@@ -235,7 +235,7 @@ export default function League() {
         {JSON.stringify(playerData) !== '{}' ? 
         <>
           <div className="league-profile">
-            <img className='league-pfp' alt="" src={"http://ddragon.leagueoflegends.com/cdn/13.7.1/img/profileicon/" + playerData.profileIconId + ".png"} />
+            <img className='league-pfp' alt="" src={"https://ddragon.leagueoflegends.com/cdn/13.7.1/img/profileicon/" + playerData.profileIconId + ".png"} />
             <section className="league-name">
               <p className='league-info' style={{fontSize: 50}}>{playerData.name}</p>
               <p className='league-info'>Summoner Level: {playerData.summonerLevel}</p>
