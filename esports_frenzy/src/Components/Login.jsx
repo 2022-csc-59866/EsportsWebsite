@@ -8,8 +8,6 @@ export default function Login() {
     const [password, setPassword] = useState('');
 
     const logInUser = async () => {
-        console.log(email, password);
-    
         try {
           await httpclient.post("https://esports-frenzy-flask.onrender.com/login", {
             email,

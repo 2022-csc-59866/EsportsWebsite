@@ -12,6 +12,6 @@ class ApplicationConfig:
     SESSION_TYPE = "redis"
     SESSION_PERMANENT = False
     SESSION_USE_SIGNER = True
-    SESSION_REDIS = redis.from_url("redis://red-chio9ae4dad01annfng0:6379")
+    SESSION_REDIS = redis.from_url("rediss://red-chio9ae4dad01annfng0:At2i6kqMwQjEq782u8dY3NvBHWZyVrX0@ohio-redis.render.com:6379")
     SESSION_COOKIE_SECURE = True
     SESSION_COOKIE_HTTPONLY = True

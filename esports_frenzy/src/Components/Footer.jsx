@@ -8,7 +8,7 @@ function Footer() {
 
     const joinList = async () => {
         try {
-            await httpclient.post("https://esports-frenzy-flask.onrender.com/subscription", {
+            await httpclient.post("//localhost:8000/subscription", {
             email,
           });
         } catch (error) {
