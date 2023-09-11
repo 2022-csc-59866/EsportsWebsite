@@ -12,6 +12,6 @@ class ApplicationConfig:
     SESSION_TYPE = "redis"
     SESSION_PERMANENT = False
     SESSION_USE_SIGNER = True
-    SESSION_REDIS = redis.from_url("REDIS_URI")
+    SESSION_REDIS = redis.from_url(["REDIS_URI"])
     SESSION_COOKIE_SECURE = True
     SESSION_COOKIE_HTTPONLY = True
