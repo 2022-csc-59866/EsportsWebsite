@@ -14,4 +14,3 @@ class ApplicationConfig:
     SESSION_USE_SIGNER = True
     SESSION_REDIS = redis.from_url(os.environ['REDIS_URI'])
     SESSION_COOKIE_SECURE = True
-    SESSION_COOKIE_HTTPONLY = True
